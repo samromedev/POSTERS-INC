@@ -1,0 +1,155 @@
+:root{
+    --primary-color: #104edd;
+    --secondary-color: #3ea1f7;
+    --thertiary-color: #a6fff9;
+    --fisrt-font: 2rem;
+    --second-font: 1rem;
+    --radius-border: 100px;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+/*Header*/
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /*Para que los elementos se pongan uno sobre otro*/
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 335px; /*Para que no este pegado al techo de nuestra*/
+    text-align: center;
+    background-color: var(--primary-color);
+    .header_title--container {
+        width: 90%;
+        min-width: 288px; /*Estas son medidas muy especificas y las usamos para que una vez llegue 
+        a 900px dejara de crecer el contenedor, siendo asi una medida estatica tambien para determinar
+        el ancho de nuestro contenedor */
+        max-width: 900px;
+        height: 218px;
+        margin-top: 30px;
+        align-self: center;
+        >img {
+            width: 200px;
+            height: 50px;
+            align-self: center;
+        }
+        >.header-title {
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 2.6rem; /*La sangria del texto, el espaciado entre cada saltyo de linea
+            que tiene este mismo*/
+            color: white;
+        }
+        >.header-subtitle {
+            margin-top: 15px;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: white;
+        }
+        .header_button--cta {
+            position: absolute;
+            top: 270px; /*Para mover el elemento en la posicion desada sin necesidad de hacerle
+        caso al contenedor padre.*/
+            left: calc(50% + -114.5px);
+            display: block;
+            margin-top: 35px;
+            padding: 15px;
+            width: 229px;
+            height: 48px;
+            background-color: var(--thertiary-color);
+            /*Sombra*/
+            box-shadow: 0px 4px 8px rgba(32, 30, 89, 0.16);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--warm-black);
+            /*Añadiendo iconos del spam para que se vea el icono*/
+            span {
+                display: inline-block;
+                width: 13px;
+                height: 8px;
+                margin-left: 10px;
+                background-image: url('./assets/icons/down-arrow.svg');
+            }
+        }
+    }
+}
+
+
+/*nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    flex-wrap: wrap;
+    padding: 1rem;
+    border: 1px var(--primary-color);
+}
+/* Div left (IMG)
+.logo-nav {
+    display: flex;
+    height: 150px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    >img {
+        height: 60%;
+        width: auto;
+        justify-content: center;
+    }
+}
+/*Ul right elements list
+.nav-list-elements {
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: var(--fisrt-font);
+    >a {
+            cursor: pointer;
+            text-decoration: none;
+            >.elements-nav {
+                color: var(--thertiary-color);
+                padding: auto;
+                margin: 0 1rem;
+        }
+    }
+}
+ /*Main part of header */
+/*Section-top
+main{
+    width: auto;
+    height: auto;
+    background-color: var(--thertiary-color)
+}
+main .element-top-section-landing {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.div_main-heading-element {
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.title-heading-element {
+    font-size: 10rem;
+    color: var(--primary-color);
+}
+
+
+@media only screen and (min-widht: 300px) and (max-widht:700px) {
+
+}
