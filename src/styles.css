@@ -1,7 +1,7 @@
 :root{
     --primary-color: #104edd;
     --secondary-color: #3ea1f7;
-    --thertiary-color: #a6fff9;
+    --thertiary-color: #a6d1ff;
     --fisrt-font: 2rem;
     --second-font: 1rem;
     --radius-border: 100px;
@@ -33,11 +33,11 @@ header {
         a 900px dejara de crecer el contenedor, siendo asi una medida estatica tambien para determinar
         el ancho de nuestro contenedor */
         max-width: 900px;
-        height: 218px;
+        height: 230px;
         margin-top: 30px;
         align-self: center;
         >img {
-            width: 200px;
+            width: fit-content;
             height: 50px;
             align-self: center;
         }
@@ -86,70 +86,34 @@ header {
 }
 
 
-/*nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--secondary-color);
-    flex-wrap: wrap;
-    padding: 1rem;
-    border: 1px var(--primary-color);
-}
-/* Div left (IMG)
-.logo-nav {
-    display: flex;
-    height: 150px;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    >img {
-        height: 60%;
-        width: auto;
-        justify-content: center;
-    }
-}
-/*Ul right elements list
-.nav-list-elements {
+/*Main section (1) exchange of information and carrousel*/
+main {
+    width: 100%;
+    min-width: 320px; /*Esto para que para que no se haga mas pequeño después de esta dimension,
+    y quede igual al header */
     height: auto;
-    width: auto;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-size: var(--fisrt-font);
-    >a {
-            cursor: pointer;
-            text-decoration: none;
-            >.elements-nav {
-                color: var(--thertiary-color);
-                padding: auto;
-                margin: 0 1rem;
+    background-color: var(--secondary-color);
+    >.main__section--exchange-container{ /*Fisrt section exchange container*/
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        text-align: center;
+        .section__div--main-carrousel{
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            background-image: url('/assets/img/Grupo\ Epp\(1\)-min.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat
+        }
+        .section__div--main-carrousel{
+            width: 90%;
+            min-width: 288px;
+            max-width: 900px;
+            margin: 0 auto; /*Arriba y abajo (0), a los lados (auto)*/
         }
     }
-}
- /*Main part of header */
-/*Section-top
-main{
-    width: auto;
-    height: auto;
-    background-color: var(--thertiary-color)
-}
-main .element-top-section-landing {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-.div_main-heading-element {
-    display: flex;
-    height: auto;
-    width: auto;
-}
-.title-heading-element {
-    font-size: 10rem;
-    color: var(--primary-color);
-}
-
-
-@media only screen and (min-widht: 300px) and (max-widht:700px) {
-
 }
