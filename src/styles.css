@@ -6,6 +6,10 @@
     --second-font: 1rem;
     --radius-border: 100px;
 }
+@font-face {
+    font-family: 'JumboSale'; /* Elige un nombre para tu fuente */
+    src: url('../assets/fonts/JumboSale.otf') format('opentype');
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -13,6 +17,7 @@
 }
 html {
     font-size: 62.5%;
+    font-family: "JumboSale", sans-serif      
 }
 
 /*Header*/
@@ -24,7 +29,7 @@ header {
     justify-content: center;
     width: 100%;
     min-width: 320px;
-    height: 335px; /*Para que no este pegado al techo de nuestra*/
+    height: 400px; /*Para que no este pegado al techo de nuestra*/
     text-align: center;
     background-color: var(--primary-color);
     .header_title--container {
@@ -33,30 +38,30 @@ header {
         a 900px dejara de crecer el contenedor, siendo asi una medida estatica tambien para determinar
         el ancho de nuestro contenedor */
         max-width: 900px;
-        height: 230px;
+        height: 400px;
         margin-top: 30px;
         align-self: center;
         >img {
-            width: fit-content;
+            width: 200px ;
             height: 50px;
             align-self: center;
         }
         >.header-title {
-            font-size: 2.4rem;
-            font-weight: bold;
-            line-height: 2.6rem; /*La sangria del texto, el espaciado entre cada saltyo de linea
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 3.5rem; /*La sangria del texto, el espaciado entre cada saltyo de linea
             que tiene este mismo*/
             color: white;
         }
         >.header-subtitle {
             margin-top: 15px;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             line-height: 1.8rem;
             color: white;
         }
         .header_button--cta {
             position: absolute;
-            top: 270px; /*Para mover el elemento en la posicion desada sin necesidad de hacerle
+            top: 337px; /*Para mover el elemento en la posicion desada sin necesidad de hacerle
         caso al contenedor padre.*/
             left: calc(50% + -114.5px);
             display: block;
@@ -79,7 +84,7 @@ header {
                 width: 13px;
                 height: 8px;
                 margin-left: 10px;
-                background-image: url('./assets/icons/down-arrow.svg');
+                background-image: url('../assets/icons/arrow-right-02-stroke-rounded.svg');
             }
         }
     }
@@ -89,31 +94,35 @@ header {
 /*Main section (1) exchange of information and carrousel*/
 main {
     width: 100%;
-    min-width: 320px; /*Esto para que para que no se haga mas pequeño después de esta dimension,
-    y quede igual al header */
+    min-width: 320px; /*Esto para que para que no se haga mas pequeño después de esta dimension,y quede igual al header */
     height: auto;
-    background-color: var(--secondary-color);
-    >.main__section--exchange-container{ /*Fisrt section exchange container*/
-        width: 100%;
+    .main-products__container-slider{ /*Slider*/
+        display: flex;
+        flex-direction: column;
+        width: 90%;
         height: auto;
-        padding-top: 60px;
-        padding-bottom: 30px;
-        text-align: center;
-        .section__div--main-carrousel{
-            width: auto;
-            height: auto;
+        margin: 0 auto;
+        margin-top: 30px;
+        align-items: center;
+        .main-products--slider {
+            position: relative;
+            width: 80%;
+            min-width: 200px;
+            max-width: 800px;
+            height: 200px;
             margin: 0 auto;
-            margin-bottom: 100px;
-            background-image: url('/assets/img/Grupo\ Epp\(1\)-min.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat
-        }
-        .section__div--main-carrousel{
-            width: 90%;
-            min-width: 288px;
-            max-width: 900px;
-            margin: 0 auto; /*Arriba y abajo (0), a los lados (auto)*/
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: var(--thertiary-color);
+            }
+        .slider-cards {
+                width: 100%;
+                height: 100%;
+            >img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
